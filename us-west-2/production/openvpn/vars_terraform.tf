@@ -1,7 +1,3 @@
-variable "environment" {
-  type = "map"
-}
-
 variable "vpc_conf" {
   type = "map"
 }

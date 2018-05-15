@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "${lookup(var.environment, "region", "us-west-2")}"
+  region = "${lookup(var.vpc_conf, "region", "us-west-2")}"
 }
 
 data "aws_availability_zones" "available" {}

@@ -1,3 +1,7 @@
+environment = {
+  region = "us-west-2"
+}
+
 vpc_conf = {
   name   = "production-env-sandbox"
   cidr   = "192.168.0.0/16"
