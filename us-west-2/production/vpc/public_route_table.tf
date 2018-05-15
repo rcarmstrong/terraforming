@@ -1,7 +1,7 @@
 module "public_routetable" {
-  source = "../../modules/route_table"
+  source = "../../../modules/route_table"
 
-  vpc_id              = "${module.vpc_sandbox.vpc_id}"
+  vpc_id              = "${module.vpc.vpc_id}"
   name                = "Public Gateway"
   internet_gateway_id = "${module.internet_gateway.internet_gw_id}"
   availability_zones  = "${split(",", data.null_data_source.availability_zones.inputs.names)}"

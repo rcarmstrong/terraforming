@@ -1,7 +1,7 @@
 module "private_routetable_az_1" {
-  source = "../../modules/route_table"
+  source = "../../../modules/route_table"
 
-  vpc_id             = "${module.vpc_sandbox.vpc_id}"
+  vpc_id             = "${module.vpc.vpc_id}"
   name               = "${format("NAT to Public Gateway - %s", element(split(",", data.null_data_source.availability_zones.inputs.names), 0))}"
   nat_gateway_id     = "${module.nat_gateways.nat_gateway_ids[0]}"
   availability_zones = "${split(",", data.null_data_source.availability_zones.inputs.names)}"
@@ -12,9 +12,9 @@ module "private_routetable_az_1" {
 }
 
 module "private_routetable_az_2" {
-  source = "../../modules/route_table"
+  source = "../../../modules/route_table"
 
-  vpc_id             = "${module.vpc_sandbox.vpc_id}"
+  vpc_id             = "${module.vpc.vpc_id}"
   name               = "${format("NAT to Public Gateway - %s", element(split(",", data.null_data_source.availability_zones.inputs.names), 1))}"
   nat_gateway_id     = "${module.nat_gateways.nat_gateway_ids[1]}"
   availability_zones = "${split(",", data.null_data_source.availability_zones.inputs.names)}"
@@ -25,9 +25,9 @@ module "private_routetable_az_2" {
 }
 
 module "private_routetable_az_3" {
-  source = "../../modules/route_table"
+  source = "../../../modules/route_table"
 
-  vpc_id             = "${module.vpc_sandbox.vpc_id}"
+  vpc_id             = "${module.vpc.vpc_id}"
   name               = "${format("NAT to Public Gateway - %s", element(split(",", data.null_data_source.availability_zones.inputs.names), 2))}"
   nat_gateway_id     = "${module.nat_gateways.nat_gateway_ids[2]}"
   availability_zones = "${split(",", data.null_data_source.availability_zones.inputs.names)}"

@@ -1,4 +1,4 @@
-variable "environment" {
+variable "vpc_conf" {
   type = "map"
 }
 
@@ -7,8 +7,6 @@ variable "aws_ami" {
     "openvpn" = "ami-e346559a"
   }
 }
-
-variable "vpc_cidr" {}
 
 variable "public_subnet_cidrs" {
   type = "list"
