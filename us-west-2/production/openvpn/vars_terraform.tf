@@ -4,6 +4,6 @@ variable "environment" {
 
 variable "aws_ami" {
   default = {
-    "openvpn" = "ami-e346559a"
+    "openvpn" = "ami-ffd74b87"
   }
 }
