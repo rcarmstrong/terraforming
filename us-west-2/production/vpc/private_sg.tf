@@ -12,7 +12,7 @@ resource "aws_security_group_rule" "private_allow_ssh" {
   to_port   = 22
   protocol  = "tcp"
 
-  source_security_group_id = "${module.public_sg.sg_id}"
+  source_security_group_id = "${module.public_sg.id}"
   security_group_id        = "${module.private_sg.id}"
 }
 
