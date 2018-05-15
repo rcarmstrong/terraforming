@@ -7,3 +7,5 @@ variable "aws_ami" {
     "openvpn" = "ami-ffd74b87"
   }
 }
+
+variable "num_openvpn_instances" {}
